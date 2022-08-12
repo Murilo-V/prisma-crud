@@ -9,6 +9,6 @@ const routes = Router();
 routes.get('/list', list);
 routes.post('/create', create);
 routes.put('/update', update);
-routes.delete('/exclude', exclude);
+routes.delete('/exclude/:id', exclude);
 
 export default routes;

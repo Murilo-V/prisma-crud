@@ -1,10 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 import { Request, Response } from "express";
 
-export const update = async ({ body: { data } }: Request, res: Response) => {
+export const update = async ({ body: { data, id } }: Request, res: Response) => {
     const prisma = new PrismaClient();
     try {
-        await prisma.user.create({ data });
+        await prisma.user.update({ data, where: { id } });
         await prisma.$disconnect();
         res.status(200).json({ message: "ok" });
     } catch (err) {
