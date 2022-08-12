@@ -1,2 +1,2 @@
 # Prisma ORM CRUD
-I was testing Prisma and created this simple test.
+I was testing Prisma and created this simple CRUD.
